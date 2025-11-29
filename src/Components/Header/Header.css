@@ -1,0 +1,630 @@
+/*********Header y navbar**********/
+.header {
+  overflow-x: hidden;
+  width: 100%;
+  background: linear-gradient(rgba(186, 30, 50, 0.15), rgba(186, 30, 50, 0.15)), url('../../../public/images/background/hero.webp') center/cover fixed;
+  position: relative;
+}
+
+/* ========== DECORACIONES NAVIDEÑAS ========== */
+.christmas-decorations {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Copos de nieve animados */
+.snowflake {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  opacity: 0.7;
+  animation: fall linear infinite;
+}
+
+.snowflake-1 {
+  top: -50px;
+  left: 10%;
+  animation-duration: 4s;
+  animation-delay: 0s;
+}
+
+.snowflake-1-2{
+  top: -50px;
+  left: 30%;
+  animation-duration: 10s;
+  animation-delay: 2s;
+  width: 1rem;
+  height: 1rem;
+}
+
+.snowflake-2 {
+  top: -50px;
+  left: 50%;
+  animation-duration: 8s;
+  animation-delay: 2s;
+  width: 40px;
+  height: 40px;
+}
+
+.snowflake-2-1{
+  top: -50px;
+  left: 65%;
+  animation-duration: 14s;
+  animation-delay: 2s;
+  width: 2rem;
+  height: 2rem;
+}
+
+.snowflake-3 {
+  top: -50px;
+  right: 15%;
+  animation-duration: 6s;
+  animation-delay: 4s;
+  width: 35px;
+  height: 35px;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+/* Decoración de rama de pino en la imagen */
+.pine-decoration {
+  position: absolute;
+  top: -13rem;
+  right: -2rem;
+  width: 15rem;
+  height: 10rem;
+  z-index: 2;
+  transform: rotate(20deg);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0.5rem; 
+  max-width: 80rem; 
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  gap: 1rem; 
+}
+
+.logo {
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.telefono-contacto {
+  display: block;
+  font-size: 1rem; 
+  color: #ddd6d1;
+  text-decoration: none;
+  margin-bottom: 0.125rem; 
+  font-weight: 500;
+  letter-spacing: 0.03125rem; 
+  transition: color 0.3s ease;
+}
+
+.telefono-contacto:hover {
+  color: #d4a574;
+}
+
+.logo-image {
+  max-width: 4rem; 
+  display: block;
+  margin: 0 auto 0.125rem;
+  cursor: pointer;
+}
+
+.tagline {
+  font-size: 1rem; 
+  color: #ddd6d1;
+  font-weight: 400;
+  letter-spacing: 0.03125rem;
+  margin: 0;
+  filter: drop-shadow(0 0.0625rem 0.3125rem rgba(0, 0, 0, 0.1));
+}
+
+.nav-center {
+  display: flex;
+  gap: 1rem; 
+  align-items: center;
+  flex: 1;
+  justify-content: space-evenly;
+  background: rgba(255, 255, 255, 0.55); 
+  backdrop-filter: blur(0.2rem); 
+  padding: 0.2rem 0.5rem; 
+  border-radius: 3.125rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.6);
+  margin-left: 2rem; 
+  margin-right: 2rem;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #4a3a2e;
+  font-size: 0.7rem; 
+  letter-spacing: 0.035rem; 
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0; 
+  font-weight: 500;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  white-space: nowrap;
+  position: relative;
+  text-decoration: none; 
+}
+
+.nav-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0.125rem; 
+  background: #d4a574;
+  transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-btn:hover {
+  color: #BA7793; 
+}
+
+.nav-btn:hover::after {
+  width: 80%;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link-faq{
+  text-decoration: none;
+}
+
+/*Botón contacto*/
+.btn-nav-right {
+  padding: 0.75rem 1.5rem; 
+  border: 0;
+  border-radius: 3.125rem;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 600;
+  font-size: 0.875rem;
+  cursor:pointer;
+  box-shadow: 0.25rem 0.5rem 1.1875rem -0.1875rem rgba(0, 0, 0, 0.2);
+  transition: all 0.5s;
+  overflow: hidden;
+}
+
+.btn-nav-right:hover {
+  background-color: #373436;
+  color: white;
+}
+
+/*botón explorar */
+.btn-explore {
+  display: inline-block;
+  padding: 0.875rem 2.5rem; 
+  font-size: 1rem; 
+  font-weight: 600;
+  color: rgb(53, 53, 53);
+  background-color: #bc4242;
+  border-radius: 3.125rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  border: 0.125rem solid blanchedalmond;
+  z-index: 1;
+  overflow: hidden;
+  margin-top: 1.5rem; 
+}
+.btn-explore:hover:before {
+  left: 0%;
+}
+
+.btn-explore:after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: background-color 0.8s ease-in-out;
+  z-index: -1;
+}
+
+.btn-explore:hover:after {
+  background-color: transparent;
+}
+/*Hero*/
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 4.5rem); 
+  padding: 1rem; 
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  padding: 2rem; 
+  margin: 4rem;
+  background:rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(0.2rem); 
+  width: 90%; 
+  max-width: 90rem; 
+  border-radius: 0.5rem; 
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.6); 
+  animation: fadeInUp 0.8s ease-out;
+  gap: 3rem; 
+  align-items: center;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(2.5rem); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.text-hero-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  flex: 1;
+  text-align: left;
+  gap:2rem;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4.5vw, 3.5rem); 
+  font-weight: 400;
+  color: #323232;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.04em; 
+  position:relative;
+}
+
+/* Subtítulo navideño */
+.christmas-subtitle {
+  display: block;
+  font-size: 0.5em;
+  color: #c41e3a;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  letter-spacing: 0.05em;
+  animation: colorShift 3s ease-in-out infinite;
+}
+
+@keyframes colorShift {
+  0%, 100% {
+    color: #c41e3a;
+  }
+  50% {
+    color: #165a2e;
+  }
+}
+
+.hero-description {
+  font-size: clamp(1rem, 1.8vw, 1.15rem); 
+  color: #5a4a3e;
+  margin: 0;
+  line-height: 1.75;
+  font-weight: 400;
+  max-width: 37.5rem; 
+}
+
+.hero-intro {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #4a3a2e;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.personzalized{
+  color:#c13f5f;
+}
+
+/* ========== CAJA DE OFERTAS NAVIDEÑAS ========== */
+.text-hero-offer {
+  background-color: #903f3f;
+  padding: 1.75rem 2.25rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(223, 15, 49, 0.4);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 31.25rem;
+  color: white;
+  border: 3px solid #ffd700;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+/* Badge navideño */
+.christmas-badge {
+  background: #ffd700;
+  color: #c41e3a;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.05em;
+}
+
+/* Items de ofertas */
+.offer-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(35, 34, 34, 0.1);
+  border-radius: 0.75rem;
+  margin-bottom: 0.75rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.offer-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.offer-text strong {
+  font-size: 1.2em;
+  color: #ffd700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/*Animación de la flecha*/
+.hero-cta-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.arrow-icon {
+  color: #c13f5f;
+  font-size: 3rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-0.625rem);
+  }
+  60% {
+    transform: translateY(-0.3125rem);
+  }
+}
+
+.hero-description p {
+  margin-bottom: 0.8rem;
+}
+
+.hero-description p:last-of-type {
+  margin-bottom: 0;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 35%; 
+  position: relative;
+}
+
+.hero-image img:first-child {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 75rem) {
+  .navbar { gap: 1.5rem; padding: 0.75rem 1.5rem; }
+  .nav-center { gap: 1.5rem; padding: 0.5rem 1rem; margin-left: 0.5rem; margin-right: 0.5rem; }
+  .nav-btn { font-size: 0.8125rem; }
+  .btn-nav-right { font-size: 0.8125rem; padding: 0.625rem 1.25rem; }
+  .hero-content { padding: 3rem 2.5rem; gap: 3rem;}
+  .hero-title {
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+  }
+  
+  .pine-decoration {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 64rem) {
+  .navbar {
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.25rem 1rem;
+    text-align: center;
+  }
+  .logo { order: 1; width: 100%; padding: 0; }
+  .logo-image{
+    max-width:7rem;
+  }
+  .tagline{
+    font-size: 1.4rem;
+  }
+  .telefono-contacto{
+    font-size: 1.4rem;
+  }
+
+  .btn-nav-right{
+    font-size: 1.3rem;
+  }
+  .nav-center {
+    order: 2;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+    border-radius: 0.5rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .nav-btn {
+    font-size: 0.875rem;
+    padding: 0.75rem 0;
+    width: 100%;
+    border-bottom: 0.0625rem solid rgba(176, 137, 104, 0.15);
+  }
+  .nav-btn:last-child { border-bottom: none; }
+  .nav-btn::after { display: none; }
+  .nav-right {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.625rem;
+  }
+
+  .hero {
+    gap: 1.25rem;
+    padding: 1rem 1rem;
+    text-align: center;
+  }
+  
+  .hero-content {
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem 1.5rem;
+    margin: 0;
+    text-align: center;
+    gap: 1rem;
+    position: relative;
+  }
+  .text-hero-content {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .hero-description {
+    text-align: center;
+  }
+  
+  .hero-cta-section {
+    align-items: center;
+  }
+  
+  .text-hero-offer {
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .hero-image {
+    display: none;
+  }
+  
+  /* Mostrar la decoración de regalos en móvil */
+  .pine-decoration {
+    display: block;
+    position: absolute;
+    top: -3rem;
+    right: 1rem;
+    width: 80px;
+    height: 80px;
+    transform: rotate(20deg);
+    z-index: 10;
+  }
+  
+  .snowflake {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 30rem) {
+  .navbar { padding: 0.75rem 0.5rem; gap: 1rem; }
+  .nav-btn { font-size: 0.875rem; padding: 0.625rem 0; }
+  .nav-center { padding: 0.75rem 1rem; }
+  
+  .hero {
+    gap: 1.25rem;
+    padding: 1.5rem 0.5rem 2rem;
+    text-align: center;
+  }
+  
+  .hero-content {
+    padding: 1.5rem 1rem;
+  }
+  
+  .offer-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .christmas-badge {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .pine-decoration {
+    width: 60px;
+    height: 60px;
+    top: -2rem;
+    right: 0.5rem;
+  }
+}
+
+/* iOS Safari */
+body.is-ios .header {
+  background: linear-gradient(rgba(186, 30, 50, 0.15), rgba(20, 100, 50, 0.2)), 
+    url('../../../public/images/background/hero.webp') center/cover scroll;
+}

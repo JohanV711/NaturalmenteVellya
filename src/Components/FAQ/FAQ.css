@@ -1,0 +1,217 @@
+
+.faq-section {
+  padding: 5rem 2rem 4rem;
+    background: linear-gradient(rgba(186, 30, 50, 0.15), rgba(186, 30, 50, 0.15)), url('../../../public/images/background/hero.webp') center/cover fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -1rem;
+}
+
+.faq-container {
+  max-width: 75rem;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(0.2rem);
+  padding: 3rem 2.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.6);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(2.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.faq-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #323232;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.faq-subtitle {
+  text-align: center;
+  color: #5a4a3e;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 1px solid rgba(176, 137, 104, 0.15);
+}
+
+.faq-item.active {
+  box-shadow: 0 4px 16px rgba(212, 165, 116, 0.3);
+  border-color: rgba(176, 137, 104, 0.3);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4a3a2e;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: var(--font-sans);
+}
+
+.faq-question:hover {
+  background-color: rgba(212, 165, 116, 0.05);
+}
+
+.faq-question span:first-child {
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  color: #d4a574;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(250, 248, 245, 0.3);
+}
+
+.faq-answer-content {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.faq-answer-content p {
+  color: #5a4a3e;
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+.faq-contact-link {
+  cursor: pointer;
+  color: #d4a574;
+  text-decoration: underline;
+  font-weight: bold;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.faq-back-btn {
+  display: inline-block;
+  margin-bottom: 2rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(176, 137, 104, 0.3);
+  border-radius: 3.125rem;
+  color: #4a3a2e;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.faq-back-btn:hover {
+  background: #d4a574;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 165, 116, 0.3);
+}
+
+@media (max-width: 48rem) {
+  .faq-section {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .faq-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .faq-title {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+  }
+
+  .faq-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+
+  .faq-icon {
+    font-size: 1.3rem;
+  }
+
+  .faq-answer-content p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .faq-section {
+    padding: 1.5rem 0.5rem 2rem;
+  }
+
+  .faq-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .faq-question {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+
+  .faq-answer-content {
+    padding: 0 1rem 1rem;
+  }
+}
+
+/* iOS Safari */
+body.is-ios .faq-section {
+  background: linear-gradient(rgba(54, 207, 130, 0.23), rgba(54, 207, 130, 0.23));
+}

@@ -1,0 +1,345 @@
+.contact {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(31, 31, 31, 0.3)), 
+    url('../../../public/images/background/contact-background.webp') center/cover fixed;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+.contact-text-content {
+  flex: 1;
+  text-align: center;
+  max-width: 500px;
+  color: white;
+}
+
+.contact-message-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.contact-message {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+}
+
+.smiley {
+  font-size: 3rem;
+  display: inline-block;
+  animation: happyBounce 2s infinite, glow 2s ease-in-out infinite alternate;
+  filter: drop-shadow(0 0 12px rgba(255, 211, 130, 0.8));
+  transform-origin: center;
+}
+
+@keyframes happyBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  40% {
+    transform: translateY(-8px) scale(1.1);
+  }
+  60% {
+    transform: translateY(-4px) scale(1.05);
+  }
+}
+
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 8px rgba(255, 211, 130, 0.6));
+  }
+  to {
+    filter: drop-shadow(0 0 16px rgba(255, 211, 130, 0.9));
+  }
+}
+
+.card {
+  width: clamp(10.5rem, 12vw + 8rem, 15.75rem);
+  height: clamp(20rem, 24vw + 16rem, 30rem);
+  background: black;
+  border-radius: 2.1875rem;
+  border: 0.125rem solid rgb(40, 40, 40);
+  padding: 0.4375rem;
+  position: relative;
+  box-shadow: 2rem 2rem 1.5rem rgba(0, 0, 0, 0.9);
+  font-size: clamp(0.7rem, 0.5vw + 0.5rem, 1rem);
+  transition: all 0.3s ease;
+}
+
+.card-int {
+  background: linear-gradient(rgba(56, 56, 56, 0.4), rgba(65, 64, 64, 0.4)), 
+    url('../../../public/images/background/phone.webp') center/cover;
+  height: 100%;
+  border-radius: 1.5625rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.camera {
+  position: absolute;
+  top: 0.375rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(2.5rem, 2vw + 1.5rem, 3.5rem);
+  height: clamp(0.35rem, 0.3vw + 0.2rem, 0.5rem);
+  background-color: black;
+  border-radius: 1.5625rem;
+  z-index: 5;
+}
+
+.camera:before {
+  content: "";
+  width: clamp(0.4rem, 0.3vw + 0.2rem, 0.5rem);
+  height: clamp(0.4rem, 0.3vw + 0.2rem, 0.5rem);
+  background-color: rgb(78, 78, 114);
+  position: absolute;
+  border-radius: 50%;
+  left: 0.3125rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.camera:after {
+  content: "";
+  width: clamp(0.2rem, 0.15vw + 0.1rem, 0.25rem);
+  height: clamp(0.2rem, 0.15vw + 0.1rem, 0.25rem);
+  background-color: lightgreen;
+  position: absolute;
+  border-radius: 50%;
+  right: 0.3125rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35%;
+  height: 1.125rem;
+  background-color: rgb(1, 1, 1);
+  border-bottom-left-radius: 0.625rem;
+  border-bottom-right-radius: 0.625rem;
+  z-index: 4;
+}
+
+.speaker {
+  position: absolute;
+  top: 0.125rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 0.125rem;
+  border-radius: 0.125rem;
+  background-color: rgb(156, 14, 14);
+  z-index: 6;
+}
+
+.int {
+  position: absolute;
+  width: 0.1875rem;
+  height: 0.1875rem;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 255, 0.212);
+}
+
+.btn1, .btn2, .btn3 {
+  position: absolute;
+  width: 0.125rem;
+  background-image: linear-gradient(to right, #111111, #222222, #333333, #464646, #595959);
+}
+
+.btn1 {
+  height: 2.8125rem;
+  top: 30%;
+  right: -0.25rem;
+}
+
+.btn2, .btn3 {
+  height: 1.875rem;
+  left: -0.25rem;
+}
+
+.btn2 {
+  top: 26%;
+}
+
+.btn3 {
+  top: 36%;
+}
+
+.hello {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  height: 100%;
+  padding: clamp(1rem, 2vw + 0.5rem, 2rem) 1rem;
+}
+
+.hello .welcome h3 {
+  font-size: clamp(1rem, 1vw + 0.5rem, 1.45rem) !important;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.hello .welcome p {
+  font-size: clamp(0.75rem, 0.8vw + 0.3rem, 0.9rem) !important;
+  margin-bottom: clamp(1rem, 1.5vw + 0.5rem, 1.5rem);
+  opacity: 0.9;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 1.2vw + 0.5rem, 1.5625rem);
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.25rem, 0.3vw + 0.15rem, 0.375rem);
+  color: #020202;
+  text-decoration: none;
+  font-size: clamp(0.75rem, 0.7vw + 0.3rem, 0.9rem);
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding: 0.5rem 1.5rem;
+  background-color: rgba(198, 188, 188, 0.72);
+   box-shadow: 0.5rem 0.2rem 1rem rgba(0, 0, 0, 0.9);
+  border-radius: 0.5rem;
+}
+
+.contact-link:hover {
+  color: #b08968;
+  transform: translateY(-0.125rem);
+}
+
+.contact-link i {
+  font-size: clamp(0.9rem, 0.8vw + 0.4rem, 1.1rem);
+  flex-shrink: 0;
+}
+
+.contact-text {
+  font-weight: 400;
+  letter-spacing: 0.03125rem;
+}
+
+.fa-instagram {
+  color: #c13584; 
+}
+
+.fa-envelope {
+  color: #0078d4; 
+}
+
+.fa-whatsapp {
+  color: #25d366; 
+}
+
+.phone-container .fa-tiktok{
+  color:black;
+}
+
+@media (max-width: 1024px) {
+  .contact-container {
+    gap: 3rem;
+  }
+  
+  .contact-message {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 2rem 1rem;
+  }
+  
+  .contact-text-content {
+    max-width: 100%;
+  }
+  
+  .contact-message-title {
+    font-size: clamp(1.5rem, 4vw, 1.8rem);
+    margin-bottom: 1rem;
+  }
+  
+  .contact-message {
+    font-size: 0.95rem;
+  }
+  
+  .smiley {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 1.5rem 1rem;
+  }
+  
+  .contact-container {
+    gap: 2rem;
+    padding: 1rem 0.5rem;
+  }
+  
+  .contact-message-title {
+    font-size: clamp(1.5rem, 5vw, 1.8rem);
+    margin-bottom: 0.8rem;
+  }
+  
+  .contact-message {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  
+  .smiley {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact-container {
+    gap: 1rem;
+  }
+  
+  .contact-message-title {
+    font-size: 1.2rem;
+  }
+  
+  .contact-message {
+    font-size: 0.85rem;
+  }
+}
+
+/* iOS Safari */
+body.is-ios .contact {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(31, 31, 31, 0.3)), 
+    url('../../../public/images/background/contact-background.webp') center/cover scroll;
+}

@@ -1,0 +1,116 @@
+.info {
+  padding: 5rem 5%;
+  overflow: hidden;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(211, 201, 201, 0.2)), 
+    url('../../../public/images/background/background.webp') center fixed;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+.about-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 400;
+  color: white;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.about-content {
+  max-width: 68.75rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  text-align: center;
+}
+
+.about-content p {
+  color: var(--color-text-dark, #f8f8f8);
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  max-width: 50rem;
+}
+
+@media (min-width: 56.25rem) {
+  .about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3.75rem;
+    align-items: center;
+  }
+}
+
+.about-visual img {
+  width: 80%;
+  height: auto;
+  display: block;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 48rem) {
+  .info {
+    padding: 3rem 5%;
+  }
+
+  .about-content {
+    gap: 1.5rem;
+  }
+
+  .about-content p {
+    font-size: 0.65rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    max-width: 100%;
+  }
+
+  .about-visual img {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+
+  .about-header {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .info {
+    padding: 2.5rem 5%;
+  }
+
+  .about-content {
+    gap: 1.25rem;
+  }
+
+  .about-content p {
+    font-size: 0.65rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-visual img {
+    max-width: 50%;
+  }
+
+  .about-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .about-title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    margin-bottom: 1rem;
+  }
+}
+
+/* iOS Safari */
+body.is-ios .info {
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(211, 201, 201, 0.2)), 
+    url('../../../public/images/background/background.webp') center/cover scroll;
+}

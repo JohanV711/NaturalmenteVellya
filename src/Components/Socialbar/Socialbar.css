@@ -1,0 +1,130 @@
+.social-bar {
+  position: fixed;
+  bottom: -6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  transition: bottom 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.social-bar.visible {
+  bottom: 2rem;
+}
+
+.card-social {
+  width: fit-content;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(0.2rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1.2rem;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.6);
+  border: 0.0625rem solid rgba(212, 165, 116, 0.2);
+  border-radius: 0.7rem;
+}
+
+.socialContainer {
+  width: 3rem;
+  height: 2.8rem;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: 0.9s;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.125rem;
+}
+
+.containerOne:hover {
+  background-color: #f4d4e2;
+}
+
+.containerTwo:hover {
+  background-color: #EA4335;
+}
+
+.containerFour:hover {
+  background-color: #128C7E;
+}
+
+.containerFive:hover {
+  background-color: #1853e8;
+}
+
+
+.socialContainer:active {
+  transform: scale(0.9);
+}
+
+.socialContainer:hover i {
+  animation: slide-in-top 0.3s both;
+}
+
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-3.125rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .social-bar.visible {
+    bottom: 1.5rem;
+  }
+  
+  .card-social {
+    padding: 0.9375rem;
+    gap: 0.75rem;
+  }
+  
+  .socialContainer {
+    width: 2.5rem;
+    height: 2.1875rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-bar.visible {
+    bottom: 1rem;
+  }
+  
+  .card-social {
+    padding: 0.75rem;
+    gap: 0.625rem;
+  }
+  
+  .socialContainer {
+    width: 2.5rem;
+    height: 1.875rem;
+    font-size: 0.9375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-bar.visible {
+    bottom: 0.5rem;
+  }
+  
+  .card-social {
+    padding: 0.625rem;
+    gap: 0.5rem;
+    border-radius: 1.3rem;
+  }
+  
+  .socialContainer {
+    width: 3rem;
+    height: 2.3rem;
+    font-size: 0.875rem;
+  }
+}
