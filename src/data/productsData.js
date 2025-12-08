@@ -1,4 +1,4 @@
-export const products = Array.from({ length: 13 }, (_, i) => ({
+export const products = Array.from({ length: 12 }, (_, i) => ({
   id: i + 1,
   price: "9.00",
   image: require(`../assets/products/details/product${i + 1}.webp`),
